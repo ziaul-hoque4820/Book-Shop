@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --container-padding: 1.25rem;
+  --container-center: true;
+  --color-primary: #00D991;
+  --color-background: white;
+  --color-text: black;
+}
+
+@theme .dark {
+  --color-background: #111827;
+  --color-text: white;
+}
