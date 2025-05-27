@@ -3,6 +3,8 @@ import Header from './Header'
 import LeftSideBar from './books/LeftSideBar'
 import BooksList from './books/BooksList'
 import RightSidebar from './books/RightSidebar'
+import BookDetailsModal from './books/BookDetailsModal'
+import BookCart from './books/BookCartDetails'
 
 function App() {
     return (

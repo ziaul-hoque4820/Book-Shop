@@ -2,7 +2,7 @@ const data = [
     {
         "id": "01",
         "name": "The Blacked Hunter",
-        "image": `${new URL('../assets/Book_Images/1.jpg', import.meta.url)}`,
+        "image": "1.jpg",
         "rating": 3,
         "price": 150,
         "author": "John Doe",
@@ -12,7 +12,7 @@ const data = [
     {
         "id": "02",
         "name": "Trecrcok Hengack",
-        "image": `${new URL('../assets/Book_Images/2.jpg', import.meta.url)}`,
+        "image": "2.jpg",
         "rating": 4,
         "price": 190,
         "author": "Jane Smith",
@@ -22,7 +22,7 @@ const data = [
     {
         "id": "03",
         "name": "Resntin Laur Goook",
-        "image": `${new URL('../assets/Book_Images/3.jpg', import.meta.url)}`,
+        "image": "3.jpg",
         "rating": 5,
         "price": 130,
         "author": "Alice Johnson",
@@ -32,7 +32,7 @@ const data = [
     {
         "id": "04",
         "name": "Lever Lenatti Face",
-        "image": `${new URL('../assets/Book_Images/4.jpg', import.meta.url)}`,
+        "image": "4.jpg",
         "rating": 4,
         "price": 160,
         "author": "Robert Brown",
@@ -42,7 +42,7 @@ const data = [
     {
         "id": "05",
         "name": "Prenlter Prestion Pssquik",
-        "image": `${new URL('../assets/Book_Images/5.jpg', import.meta.url)}`,
+        "image": "5.jpg",
         "rating": 3,
         "price": 175,
         "author": "Emily Davis",
@@ -52,7 +52,7 @@ const data = [
     {
         "id": "06",
         "name": "Slopjnnr Sunze",
-        "image": `${new URL('../assets/Book_Images/6.jpg', import.meta.url)}`,
+        "image": "6.jpg",
         "rating": 4,
         "price": 125,
         "author": "Michael Wilson",
@@ -62,7 +62,7 @@ const data = [
     {
         "id": "07",
         "name": "Woodlands Nursing Home",
-        "image": `${new URL('../assets/Book_Images/7.jpg', import.meta.url)}`,
+        "image": "7.jpg",
         "rating": 5,
         "price": 185,
         "author": "Sarah Martinez",
@@ -72,7 +72,7 @@ const data = [
     {
         "id": "08",
         "name": "The Big Deal",
-        "image": `${new URL('../assets/Book_Images/8.jpg', import.meta.url)}`,
+        "image": "8.jpg",
         "rating": 2,
         "price": 155,
         "author": "David Taylor",
@@ -82,7 +82,7 @@ const data = [
     {
         "id": "09",
         "name": "The Crow Fold",
-        "image": `${new URL('../assets/Book_Images/9.jpg', import.meta.url)}`,
+        "image": "9.jpg",
         "rating": 3,
         "price": 145,
         "author": "Sophia Anderson",
@@ -92,7 +92,7 @@ const data = [
     {
         "id": "10",
         "name": "The Lion The Witch ",
-        "image": `${new URL('../assets/Book_Images/10.jpg', import.meta.url)}`,
+        "image": "10.jpg",
         "rating": 4,
         "price": 140,
         "author": "Chris Thomas",
@@ -102,7 +102,7 @@ const data = [
     {
         "id": "11",
         "name": "Alone a True Story",
-        "image": `${new URL('../assets/Book_Images/11.jpg', import.meta.url)}`,
+        "image": "11.jpg",
         "rating": 5,
         "price": 180,
         "author": "Karen White",
@@ -112,7 +112,7 @@ const data = [
     {
         "id": "12",
         "name": "When I Feel Alone",
-        "image": `${new URL('../assets/Book_Images/12.jpg', import.meta.url)}`,
+        "image": "12.jpg",
         "rating": 2,
         "price": 135,
         "author": "Jason Harris",
@@ -121,6 +121,6 @@ const data = [
     }
 ]
 
-export function initalBook() {
+export function getAllBook() {
     return data;
 }

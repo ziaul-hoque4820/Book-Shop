@@ -3,7 +3,7 @@ import React from 'react'
 function Favourite() {
     return (
         <div className="">
-            <svg className="border border-main-Color rounded-md max-[640px]:w-10 sm:w-12 md:w-9 lg:w-9 xl:w-11"
+            <svg className="border border-main-Color rounded-md max-[550px]:w-10 sm:w-12 md:w-9 lg:w-9 xl:w-11"
                 viewBox="0 0 24 24"
                 style={{ cursor: "pointer" }}
             >
