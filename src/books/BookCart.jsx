@@ -1,12 +1,28 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Image1 from '../assets/book-img/1.jpg'
 import Favourite from './Favourite'
 import { getImageUrl } from '../utils/bookImage'
 import BookDetailsModal from './BookDetailsModal'
+import { BookContext } from '../context'
 
 function BookCart({ book }) {
     const [showModal, setShowModal] = useState(false);
     const [selectBook, setSelectBook] = useState(null);
+    const {cartData, setCartData} = useContext(BookContext);
+
+    const handleAddToCart = (event, book) => {
+        event.stopPropagation();
+        
+        const found = cartData.find(item => {
+            return item.id === book.id;
+        });
+        
+        if(!found){
+            setCartData([...cartData, book]);
+        } else{
+            console.log("This Book Already added");
+        }
+    }
 
     const handleCloseModal = () => {
         setSelectBook(null);
@@ -22,7 +38,7 @@ function BookCart({ book }) {
     return (
         <>
 
-            {showModal && <BookDetailsModal onClose={handleCloseModal} book={selectBook} />}
+            {showModal && <BookDetailsModal onClose={handleCloseModal} book={selectBook} onAddToCart={handleAddToCart} />}
             <figure className="p-4 border border-black/10 shadow-sm dark:border-white/10 rounded-xl">
                 <img className="w-full object-cover" src={getImageUrl(book.image)} alt={book.name} />
                 <figcaption className="pt-4">
@@ -37,8 +53,7 @@ function BookCart({ book }) {
                             ))}
                         </div>
                         <div className='flex items-center justify-between '>
-                            <div className="bg-primary cursor-pointer rounded-lg py-2 px-16 flex items-center justify-center gap-10 text-[#171923] font-semibold text-sm"
-                                href="#">
+                            <div onClick={(e) => handleAddToCart(e, book)} className="bg-primary cursor-pointer rounded-lg py-2 px-16 flex items-center justify-center gap-10 text-[#171923] font-semibold text-sm">
                                 <span>${book.price} | Add to Cart</span>
                             </div>
                             <Favourite />

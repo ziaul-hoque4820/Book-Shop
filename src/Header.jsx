@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ring from './assets/ring.svg'
 import moon from './assets/icons/moon.svg'
 import shoppingCart from './assets/shopping-cart.svg'
 import BookCartDetails from './books/BookCartDetails';
+import { BookContext } from './context';
 
 function Header() {
+    const {cartData} = useContext(BookContext);
 
     const [showCart, setShowCart] = useState(false);
     const handleCart = () => {
@@ -37,9 +39,9 @@ function Header() {
                         onClick={handleCart}
                             className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] cursor-pointer p-1 inline-block" href="#">
                             <img src={shoppingCart} width="24" height="24" alt="" />
-                            {
+                            { cartData.length > 0 &&
                                 (
-                                    <span className='rounded-full absolute top-[-12px] left-[28px] bg-[#12CF6F] text-white text-center p-[2px] w-[30px] h-[30px] '></span>
+                                    <span className='rounded-full absolute top-[-12px] left-[28px] bg-[#12CF6F] text-white text-center p-[2px] w-[30px] h-[30px] '>{cartData.length}</span>
                                 )
                             }
                         </div>
