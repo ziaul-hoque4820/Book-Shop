@@ -1,7 +1,4 @@
 import React from 'react'
-import Image1 from '../assets/book-img/1.jpg'
-import RightSidebar from './RightSidebar'
-import Favourite from './Favourite'
 import { getAllBook } from '../data/bookData'
 import BookCart from './BookCart'
 
@@ -16,7 +13,6 @@ function BooksList() {
                 ))
             }
             </div>
-            <RightSidebar />
         </div>
     )
 }
