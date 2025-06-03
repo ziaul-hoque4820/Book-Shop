@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { BookContext } from "../context";
+import { BookContext } from "../context/context";
 import { getImageUrl } from "../utils/bookImage";
 
 const BookCartDetails = ({ onClose }) => {
@@ -24,12 +24,11 @@ const BookCartDetails = ({ onClose }) => {
     const handleDecreaseQuantity = (id) => {
         const updatedCart = cartData.map(item => {
             if (item.id === id) {
-                const newQuantity = (item.quantity || 1) - 1;
-                return { ...item, quantity: newQuantity };
+                // const newQuantity = (item.quantity || 1) - 1;
+                return { ...item, quantity: (item.quantity || 1) - 1 };
             }
             return item;
-        }).filter(item => (item.quantity || 1) > 0); // Quantity 0 হলে রিমুভ
-
+        })
         setCartData(updatedCart);
     };
 

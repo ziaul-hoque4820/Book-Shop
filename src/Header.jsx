@@ -1,9 +1,8 @@
 import React, { useContext, useState } from 'react'
 import ring from './assets/ring.svg'
-import moon from './assets/icons/moon.svg'
 import shoppingCart from './assets/shopping-cart.svg'
 import BookCartDetails from './books/BookCartDetails';
-import { BookContext } from './context';
+import { BookContext } from './context/context';
 
 function Header() {
     const {cartData} = useContext(BookContext);
@@ -19,19 +18,12 @@ function Header() {
                 showCart && <BookCartDetails onClose={() => setShowCart(false)} />
             }
             <nav className="container flex items-center justify-between mx-auto py-6 text-center">
-                <a className='text-sky-500 text-3xl font-bold'>
-                    BookShop
-                </a>
+                <a href="/" className='text-sky-500 text-3xl font-bold'>BookShop</a>
 
                 <ul className="flex items-center space-x-5">
                     <li>
                         <a className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block" href="#">
                             <img src={ring} width="24" height="24" alt="" />
-                        </a>
-                    </li>
-                    <li>
-                        <a className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block" href="#">
-                            <img src={moon} width="24" height="24" alt="" />
                         </a>
                     </li>
                     <li>

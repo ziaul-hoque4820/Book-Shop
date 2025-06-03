@@ -1,47 +1,61 @@
-import React from 'react'
-import trending from '../assets/icons/trending.svg'
-import newRelease from '../assets/icons/newRelease.svg'
-import commingSoon from '../assets/icons/commingSoon.svg'
-import favourite from '../assets/icons/favourite.svg'
-import watchLater from '../assets/icons/watchLater.svg'
+import React from 'react';
+import trending from '../assets/icons/trending.svg';
+import newRelease from '../assets/icons/newRelease.svg';
+import commingSoon from '../assets/icons/commingSoon.svg';
+import favourite from '../assets/icons/favourite.svg';
 
-function LeftSideBar() {
+function LeftSideBar({ setFilter }) {
     return (
         <aside>
             <ul className="space-y-2">
                 <li>
-                    <a className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary " href="#">
-                        <img src={trending} width="24" height="24" alt="" />
+                    <button 
+                        onClick={() => setFilter('all')} 
+                        className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary w-full text-left"
+                    >
+                        {/* <img src={trending} width="24" height="24" alt="All Books" /> */}
+                        <span>All Books</span>
+                    </button>
+                </li>
+                <li>
+                    <button 
+                        onClick={() => setFilter('trending')} 
+                        className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary w-full text-left"
+                    >
+                        <img src={trending} width="24" height="24" alt="Trending" />
                         <span>Trending</span>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a className="flex items-center space-x-2 px-5 hover:bg-primary py-3.5 rounded-lg" href="#">
-                        <img src={newRelease} width="24" height="24" alt="" />
+                    <button 
+                        onClick={() => setFilter('new_releases')} 
+                        className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary w-full text-left"
+                    >
+                        <img src={newRelease} width="24" height="24" alt="New Releases" />
                         <span>New Releases</span>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a className="flex items-center space-x-2 px-5 hover:bg-primary py-3.5 rounded-lg" href="#">
-                        <img src={commingSoon} width="24" height="24" alt="" />
+                    <button 
+                        onClick={() => setFilter('coming_soon')} 
+                        className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary w-full text-left"
+                    >
+                        <img src={commingSoon} width="24" height="24" alt="Coming Soon" />
                         <span>Coming Soon</span>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a className="flex items-center space-x-2 px-5 hover:bg-primary py-3.5 rounded-lg" href="#">
-                        <img src={favourite} width="24" height="24" alt="" />
+                    <button 
+                        onClick={() => setFilter('favourite')} 
+                        className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary w-full text-left"
+                    >
+                        <img src={favourite} width="24" height="24" alt="Favourites" />
                         <span>Favourites</span>
-                    </a>
-                </li>
-                <li>
-                    <a className="flex items-center space-x-2 px-5 hover:bg-primary py-3.5 rounded-lg" href="#">
-                        <img src={watchLater} width="24" height="24" alt="" />
-                        <span>Watch Later</span>
-                    </a>
+                    </button>
                 </li>
             </ul>
         </aside>
-    )
+    );
 }
 
-export default LeftSideBar
+export default LeftSideBar;
