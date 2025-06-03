@@ -3,6 +3,7 @@ import Header from './Header';
 import LeftSideBar from './books/LeftSideBar';
 import BooksList from './books/BooksList';
 import { BookContext } from './context/context';
+import Footer from './Footer';
 
 function App() {
     const [cartData, setCartData] = useState([]);
@@ -23,6 +24,7 @@ function App() {
                     <BooksList filter={filter} />
                 </div>
             </main>
+            <Footer />
         </BookContext.Provider>
     );
 }
