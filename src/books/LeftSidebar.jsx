@@ -11,7 +11,7 @@ function LeftSideBar({ setFilter }) {
             <ul className="space-y-2">
                 <li>
                     <button 
-                        onClick={() => setFilter('all')} 
+                        onClick={() => setFilter('all')}
                         className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary w-full text-left cursor-pointer"
                     >
                         <img src={allBook} width="24" height="24" alt="All Books" />
@@ -20,7 +20,7 @@ function LeftSideBar({ setFilter }) {
                 </li>
                 <li>
                     <button 
-                        onClick={() => setFilter('trending')} 
+                        onClick={() => setFilter('trending')}
                         className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary w-full text-left cursor-pointer"
                     >
                         <img src={trending} width="24" height="24" alt="Trending" />
@@ -29,7 +29,7 @@ function LeftSideBar({ setFilter }) {
                 </li>
                 <li>
                     <button 
-                        onClick={() => setFilter('new_releases')} 
+                        onClick={() => setFilter('new_releases')}
                         className="flex items-center space-x-2 px-5 py-3.5 rounded-lg hover:bg-primary w-full text-left cursor-pointer"
                     >
                         <img src={newRelease} width="24" height="24" alt="New Releases" />

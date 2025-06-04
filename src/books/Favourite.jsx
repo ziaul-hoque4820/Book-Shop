@@ -5,6 +5,8 @@ function Favourite({ book }) {
     const { favourites, setFavourites } = useContext(BookContext);
     const isFavourite = favourites.includes(book.id);
 
+
+
     const toggleFavourite = (e) => {
         e.stopPropagation();
         if (isFavourite) {
@@ -16,7 +18,7 @@ function Favourite({ book }) {
 
     return (
         <div onClick={toggleFavourite}>
-            <svg 
+            <svg
                 className="border border-green-200 rounded-md max-[550px]:w-10 sm:w-12 md:w-9 lg:w-9 xl:w-11"
                 viewBox="0 0 24 24"
                 style={{ cursor: "pointer" }}

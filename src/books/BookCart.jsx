@@ -10,7 +10,10 @@ function BookCart({ book }) {
 
     const handleAddToCart = (event, book) => {
         event.stopPropagation();
-        if (!cartData.find(item => item.id === book.id)) {
+        const found = cartData.find((item) => {
+            return item.id === book.id;
+        })
+        if (!found) {
             setCartData([...cartData, book]);
         } else {
             console.log("This Book is already added");
