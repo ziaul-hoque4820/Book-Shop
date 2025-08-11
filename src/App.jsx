@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
-import LeftSideBar from './books/LeftSideBar';
+import LeftSideBar from './books/LeftSidebar';
 import BooksList from './books/BooksList';
 import { BookContext } from './context/context';
 import Footer from './Footer';

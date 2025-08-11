@@ -53,16 +53,21 @@ git clone https://github.com/ziaul-hoque4820/Book-Shop.git
 ```
 
 2️⃣ **Navigate to the project folder**
+```bash
 cd Book-Shop
-
+```
 3️⃣ **Install dependencies**
+```bash
 npm install
-
+```
 4️⃣ **Start the development server**
+```bash
 npm run dev
-
+```
 5️⃣ **Open in your browser**
+```bash
 http://localhost:5173
+```
 ---
 ### 🤝 Contributing
 If you’d like to contribute:
