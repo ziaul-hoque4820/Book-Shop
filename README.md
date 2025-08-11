@@ -7,7 +7,7 @@ The project demonstrates React basics such as **useState**, **props handling**, 
 ---
 
 ## 🌐 Live Demo
-🔗 **[Live Project Link](YOUR_LIVE_PROJECT_LINK_HERE)**
+🔗 **[Live Project Link](https://book-shop-vzqq.vercel.app/)**
 
 ---
 
